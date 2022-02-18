@@ -15,12 +15,20 @@ body {
   height: auto;
 }
 
+.navMenu {
+  text-align: right;
+  padding: 3px 10px;
+  font-size: 2.5em;
+}
+
 .title {
   text-align: right;
   font-style: italic;
   font-size: 1.5em;
   padding: 1em;
+  margin: 0;
 }
+
 .main {
   padding: 10px;
 }
@@ -31,19 +39,41 @@ body {
   font-size: 1.5em;
   font-weight: 700;
 }
+
 .descrip {
   padding: 15px;
   font-style: italic;
 }
-.fotos {
+
+.pastel_principal {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  margin: 6px;
+  text-align: center;
+}
+
+.pastel_secundario {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.articulo {
+  height: 250px;
+  margin: 6px;
 }
 
 .pastel {
-  height: 200px;
   flex-grow: 1;
   flex-basis: 0;
-  margin: 6px;
-  min-width: 350px;
   text-align: center;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
