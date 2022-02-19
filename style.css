@@ -5,17 +5,49 @@ body {
 }
 
 .header {
-  background-color: aquamarine;
+  position: relative;
+  background-color: #b9fbc0;
   margin: 0px;
-  height: 250px;
+  height: 200px;
 }
 
 .logo {
   text-align: left;
-  max-width: 50%;
-  height: 175px;
+  height: 200px;
   position: absolute;
-  top: 3%;
+  top: 0%;
+}
+
+.navigationBar {
+  display: none;
+  background-color: #ffcdb2;
+  padding: 5px;
+  min-width: 90%;
+  max-width: 90%;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.navButtons {
+  text-align: right;
+  padding: 10px 5px;
+}
+
+.button {
+  background-color: #ffb4a2;
+  color: #6d6875;
+  border: none;
+  width: 140px;
+  font-size: 1.5em;
+  padding: 5px 0;
+  margin: 10px 5px;
+}
+
+.button:hover {
+  color: #ffb4a2;
+  background-color: #6d6875;
+  transition: 0.5s;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .navMenu {
@@ -25,17 +57,20 @@ body {
 }
 
 .title {
-  position: relative;
-  right: 10px;
-  top: 120px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 250px;
   font-style: italic;
   font-size: 2em;
   margin: 0;
 }
+
 .header .title {
   text-align: right;
-  font-family: 'Rancho', cursive;
+  font-family: "Rancho", cursive;
   color: #913dff;
+  text-shadow: 5px 5px 8px #525252;
 }
 
 .main {
@@ -43,17 +78,18 @@ body {
 }
 
 .welcome {
+  font-size: 1.75em;
   text-align: center;
   color: #b08401;
-  font-size: 1.5em;
-  font-weight: 700;
-  font-family: "Acme", sans-serif;
+  margin: 15px;
+  font-style: italic;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .descrip {
   margin: 15px;
   font-style: italic;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .pastel_principal {
@@ -85,6 +121,13 @@ body {
   height: 100%;
 }
 
+.foto:hover {
+  background-color: #d8d8d8;
+  transform: scale(0.95);
+  box-shadow: 5px 10px 15px #000000;
+  transition: 0.5s;
+}
+
 .footer {
   background-color: #e3a6ff;
   height: 150px;
@@ -97,4 +140,38 @@ body {
 }
 .contacto {
   text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 540px) {
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    margin: 0px;
+    height: 250px;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navigationBar {
+    display: grid;
+  }
+  .title {
+    width: 250px;
+    font-style: italic;
+    font-size: 2em;
+    margin: 0;
+  }
+  .header .title {
+    width: 600px;
+    font-size: 2.7em;
+  }
+  .logo {
+    text-align: left;
+    max-width: 50%;
+    height: 250px;
+    top: 0%;
+  }
 }
