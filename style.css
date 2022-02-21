@@ -92,11 +92,22 @@ body {
 
 .welcome {
   font-size: 1.75em;
+  font-weight: bold;
+  line-height: 1.2em;
   text-align: center;
   color: #b08401;
   margin: 0px 0px;
+  padding: 0 110px;
   font-style: italic;
   font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.b1 {
+  text-align: left;
+}
+
+.b3 {
+  text-align: right;
 }
 
 .descripcion {
@@ -118,6 +129,7 @@ body {
 /* PRODUCTOS */
 
 .pasteles {
+  justify-content: space-around;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
@@ -156,6 +168,8 @@ body {
 .precio {
   text-align: right;
   margin: 10px 3px 0px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .foto {
@@ -209,34 +223,32 @@ body {
 /* Media Queries */
 
 @media screen and (min-width: 540px) {
+  .descripcion {
+    font-size: 1em;
+  }
+  .header .title {
+    font-size: 2.7em;
+  }
+  .producto {
+    width: -webkit-fill-available;
+  }
+  .pasteles {
+    flex-flow: row nowrap;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .header {
-    margin: 0px;
     height: 250px;
   }
   .navMenu {
-    display: none;
+    visibility: hidden;
   }
   .navigationBar {
     display: grid;
   }
-  .title {
-    width: 250px;
-    font-style: italic;
-    font-size: 2em;
-    margin: 0;
-  }
   .header .title {
-    width: 600px;
-    font-size: 2.7em;
-  }
-  .logo {
-    text-align: left;
-    max-width: 50%;
-    height: 250px;
-    top: 0%;
+    font-size: 4em;
   }
 }
 
