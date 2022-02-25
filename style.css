@@ -53,7 +53,7 @@ body {
   text-align: center;
   width: 100%;
   display: none;
-  box-shadow: 5px 5px 8px #000000;
+  box-shadow: 0 15px 25px 10px rgba(0, 0, 0, 0.75);
 }
 
 .navmenu a {
