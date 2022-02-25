@@ -5,6 +5,7 @@ body {
 }
 
 /* HEADER */
+
 .header {
   display: flex;
   background-color: #b9fbc0;
@@ -24,12 +25,7 @@ body {
   flex-basis: 66%;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.navMenu {
-  text-align: right;
-  padding: 3px 10px;
-  font-size: 2.5em;
+  z-index: 1;
 }
 
 .header .title {
@@ -40,6 +36,54 @@ body {
   text-shadow: 5px 5px 8px #525252;
   font-size: 2em;
   margin: 5px 10px;
+}
+
+/* NAVBAR MOVIL */
+
+.nav {
+  z-index: 2;
+  text-align: right;
+  height: 50px;
+  line-height: 50px;
+}
+
+.navmenu {
+  background-color: aliceblue;
+  margin: 0 30px 0 0;
+  text-align: center;
+  width: 100%;
+  display: none;
+  box-shadow: 5px 5px 8px #000000;
+}
+
+.navmenu a {
+  clear: right;
+  text-decoration: none;
+  color: #3d3d3d;
+  margin: 0 10px;
+  line-height: 70px;
+  display: block;
+  border-bottom: 1px solid #eaeaeb;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  width: 26px;
+  float: right;
+  display: block;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .navmenu {
+  display: block;
 }
 
 /* NAVIGATON DESKTOP */
@@ -135,7 +179,6 @@ body {
   margin: 5px;
   max-width: 260px;
   max-height: 300px;
-
 }
 
 .producto:hover {
@@ -198,8 +241,14 @@ body {
 }
 
 .footer {
-  background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 15%, rgba(255,145,254,1) 58%, rgba(255,211,249,1) 100%, rgba(0,212,255,1) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(255, 145, 254, 1) 58%,
+    rgba(255, 211, 249, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 .info {
   padding: 5px;
@@ -208,11 +257,11 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 15%, rgba(255,145,254,1) 5
   margin-left: 0 20px;
 }
 
-.contacto img{
+.contacto img {
   height: 25px;
 }
 
-.contacto{
+.contacto {
   text-align: center;
 }
 
@@ -239,7 +288,7 @@ p {
     padding: 0 110px;
   }
   .producto {
-    width: -webkit-fill-available;
+    width: 45%;
   }
   .pasteles {
     flex-flow: row nowrap;
@@ -279,7 +328,7 @@ p {
   .header {
     height: 250px;
   }
-  .navMenu {
+  .nav {
     visibility: hidden;
   }
   .navigationBar {
